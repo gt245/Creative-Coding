@@ -68,7 +68,7 @@ function setup() {
 
 
 function draw() {
-  background(41, 65, 81);
+  background(8, 55, 15);
 
   stroke(0,0,0,0);  		//stars
 					
