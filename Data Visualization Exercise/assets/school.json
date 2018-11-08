@@ -1,0 +1,28 @@
+{
+	"SchoolShootings":[
+	{
+	"name" : "France-2",
+	"number" : "2"
+	},
+	{
+	"name" : "Canada-2",
+	"number" : "2"
+	},
+	{
+	"name" : "India-5",
+	"number" : "5"
+	},
+	{
+	"name" : "SouthAfrica-6",
+	"number" : "6"
+	},
+	{
+	"name" : "Mexico-8",
+	"number" : "8"
+	},
+	{
+	"name" : "UnitedStates-288",
+	"number" : "288"
+	}
+	]
+}
