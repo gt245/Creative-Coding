@@ -34,13 +34,13 @@ function draw() {
 
 }
 
-//callback function from loadJSON
+
 function callBack(myData){
 
-  //print the entire data object
+
   console.log(myData);
 
-  //find a specific piece of data
+
   firstSlip = myData[0].slip_id;
   firstAdvice = myData[0].advice;
   console.log(firstSlip);
@@ -50,8 +50,7 @@ function callBack(myData){
 }
 
 function queryNewData(){
-  //use loadJSON with a callback method for asynchronous data loading
-  //callBack() will be called when a valid data object is received.
+
   myData = loadJSON(url, callBack);
 
 }
