@@ -21,7 +21,7 @@ function setup() {
     baseUrl = "https://ghibliapi.herokuapp.com/films";
    
 
-    query = "cats"; //article search term
+    query = "title"; //article search term
 
     url = baseUrl + "q=" + query;
 
@@ -41,18 +41,25 @@ function gotData(myData){
 
 function changeQuery(){
 
-  query = input.value(); //get value of text field, store as the new query
+  query = input.value(); 
 
   console.log(query);
 
-    //Rebuild URL with new query value
+    
     url = baseUrl + "q=" + query;
 
     console.log(url);
 
-    //call loadJSON again with new URL (therefore the new search term)
+    
     myData = loadJSON(url, gotData);
 
-  input.value(""); //clear out text input so it doesn't display the last input
+  input.value(""); 
 
+}
+
+function display(){
+    if(input.value == "My neighbor Totoro"){
+    text(myData.description[8], 50,50);
+        
+    }
 }
