@@ -1,117 +1,37 @@
-var fortuneCookies;
-var takeoutBox;
-
-var Slip;
-var Advice;
-
 var myData;
+
 var url;
+var baseUrl;
+var apiKey;
 
-function preload(){  //load all images
+var query;
 
-  fortuneCookies = loadImage("assets/fortune-cookie-png-2.png")
-  takeoutBox = loadImage("assets/box.png")
-  green = loadImage("assets/green.png")
-  yellow = loadImage("assets/yellow.png")
+function setup() {
 
-}
+  createCanvas(500,500);
 
-
-function setup() {    //first page of EAT ME
-
-
-  createCanvas(1600,1100);
-  background(248,210,78);
-
-  url = "https://api.adviceslip.com/advice";
+  url = "https://ghibliapi.herokuapp.com/films";
+  
+  display();
   queryNewData();
-  fill(0);
-
-textSize(60);             
-  text("EAT ME!", 640,300,500,200);
-  image(takeoutBox, 550,500, 400, 460);
     
 }
 
 function draw() {
+  input = createInput("Search for a Studio Ghibli movie");
+  input.position(100,100);
+  input.style('width','200');
 
-
-  fortunecookie();
-
-  fortune();
-  fill(255);
- 
-
+  button = createButton('Search');
+  button.position(300,100;
+    button.mousePressed(display);
 }
 
-
-function callBack(myData){
-
-
-  Slip = myData.slip.slip_id;
-  Advice = myData.slip.advice;
-
-
+function display(){ 
+  var title = input.value();
+  text()
 }
 
 function queryNewData(){
-
   myData = loadJSON(url, callBack);
-
 }
-
-function fortunecookie(){     //Second Screen with Fortune Cookie
-
-
-
-var d = dist(mouseX,mouseY, 750,700);
-
-  if (mouseIsPressed && d<175) {
-    background(118,205,218);
-     image(takeoutBox, 550,500, 400, 460);
-    image(green, 330, 700,300,200);
-    image(yellow, 830, 700,400,250);
-
-    image(fortuneCookies, 450,150, 600, 340);
-    
-
-
-fill(0);
-   textSize(50);
-  text("Press '1' to Open the Fortune Cookie!", 100,500,500,200);
-
-
-  } 
- 
-
-
-}
-
-
-
-
-function fortune(){           //Fortune Paper
-
-    
- 
-  if (keyIsPressed && key == '1'){
-
-
-    noStroke();
-    fill(0, 0, 0, 10);
-    rect(0,0, width, height);
-    fill(255, 255, 255,);
-    rect(400, 330, 700, 200);
-     textSize(25);
-      fill(0, 0, 0);
-
-      text(Advice, 500,400, 500, 170);
-
-      textSize(50);
-      fill(255, 255, 255);
-
-      text("Refresh page to get a new fortune!", 400, 200 );
-
-  }
-
-  }
