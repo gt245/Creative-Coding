@@ -148,7 +148,7 @@ function letter(){
   textFont(myFont);
   textSize(100);
   textAlign(CENTER, CENTER);
-  text("Write a letter to your future self...", window.innerWidth/4, 150, window.innerWidth/2);
+  text("Write a letter to your future self...", window.innerWidth/4, 120, window.innerWidth/2);
   fill(0);
   textSize(50);
   text("Press the right arrow key to send off your letter-lantern.", window.innerWidth/4, window.innerHeight - 50, window.innerWidth/2);
